@@ -141,7 +141,10 @@ Function Build-DiscordNotif(){
     $removedGames = Get-Content -Path ".\RemovedItems.txt"
     $removedGames = $removedGames -split ".zip " -join "`n"
     $removedGames = $removedGames -split ".7z " -join "`n"
-    $messageText = "$DiscordRoleID`n"
+    $messageText = ""
+    if($DiscordRoleID.Length -gt 0){
+        $messageText += "$DiscordRoleID `n"
+    }
 
     if($addedGames.Length -gt 0){
         $messageText += "New Games Added!`n$addedGames"
