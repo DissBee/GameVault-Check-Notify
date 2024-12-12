@@ -48,3 +48,7 @@ use at your own risk or change to fit your needs.
 # Future plans
 This was created to tide me over until I get around to making a PR with this functionality directly within GameVault (not using Powershell :P don't worry) 
 
+I do not plan to update this script unless I happen to find a major issue in my own use of it.
+
+I'll get around to the "official" implimentation eventually <3
+
