@@ -110,12 +110,12 @@ Function Send-DiscordNotif(){
 
         $payload1 = [PSCustomObject]@{
 
-        content = $firstHalf
+        content = "$firstHalf"
 
         }
         $payload2 = [PSCustomObject]@{
 
-        content = $secondHalf
+        content = "$secondHalf"
 
         }
         Invoke-RestMethod -Uri $DiscordHookURL -Method Post -Body ($payload1 | ConvertTo-Json) -ContentType 'Application/Json'
@@ -126,7 +126,7 @@ Function Send-DiscordNotif(){
 
         $payload = [PSCustomObject]@{
 
-        content = $content
+        content = "$content"
 
         }
         Invoke-RestMethod -Uri $DiscordHookURL -Method Post -Body ($payload | ConvertTo-Json) -ContentType 'Application/Json'
@@ -143,21 +143,15 @@ Function Build-DiscordNotif(){
     $removedGames = $removedGames -split ".7z " -join "`n"
     $messageText = ""
     if($DiscordRoleID.Length -gt 0){
-        $messageText += "$DiscordRoleID `n"
+        $messageText += "$DiscordRoleID`n"
     }
 
     if($addedGames.Length -gt 0){
         $messageText += "New Games Added!`n$addedGames"
     }
-    else{
-        Write-Output "No new games were detected."
-    }
 
     if($removedGames.Length -gt 0){
         $messageText +="`n`nGames Removed:`n$removedGames"
-    }
-    else{
-        Write-Output "No removed games were detected."
     }
 
     return $messageText
