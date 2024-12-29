@@ -5,7 +5,7 @@ SSH_HOST="user@address"  # Update with your SSH host info
 SSH_PORT=22   # Default to 22
 CURRENT_LIST_PATH="./currentlist.txt" # Where the current list will be kept - move this wherever you want but keep name the same
 GAMES_PATH="/your/games/directory"  # Update with the path to your games directory
-DISCORD_HOOK_URL="your hook url goes here>
+DISCORD_HOOK_URL="your hook url goes here>"
 DISCORD_ROLE_ID="<@roleidnumber>"   # Update with your Discord role ID
 
 # Function to send Discord webhook message
