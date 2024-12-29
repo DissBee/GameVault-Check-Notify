@@ -1,6 +1,20 @@
 # GameVault-Check-Notify
 A script to check your GameVault "Games" directory and send a Discord webhook message with the changes (games added or removed)
 
+
+# NEW - Bash script that does this too but assumes you know what you are doing. Assumes games are on remote host.
+Variables:
+
+* SSH_Host="user@address" (set this to be the user@IP/name of the host that holds your games)
+* SSH_Port=22 (change this if you use a different port)
+* CURRENT_LIST_PATH="./currentlist.txt" (change this if you want)
+* GAMES_PATH="/your/path/to/games/directory/on/remote/host"
+* DISCORD_HOOK_URL="your hook url goes here"
+* DISCORD_ROLE_ID="put your role id to @ here in the proper format"
+
+
+# Everything below this point is for the powershell version
+
 # Notes
 This is a very basic script that I threw together to meet a need I have until I get around to making a proper implimentation. Use at your own risk.
 
@@ -14,7 +28,7 @@ Put this script in a folder somewhere and always run it from that folder. Script
 
 Map your share that contains the games folder using the same user you run this script as
 
-# Basic Setup Guide
+# Basic Setup Guide 
 Requirements: Already running GameVault server. A drive mapping to the folder containing the games
 
 
