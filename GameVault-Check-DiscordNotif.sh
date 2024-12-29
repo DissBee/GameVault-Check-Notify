@@ -44,7 +44,7 @@ EOF
   fi
 }
 
-# Check if currentlist.txt exists and is empty
+# Check if currentlist.txt exists - if not then create it.
 if [ ! -s "$CURRENT_LIST_PATH" ]; then
   echo "currentlist.txt is empty or missing. Grabbing the initial games list."
   ssh -p "$SSH_PORT" "$SSH_HOST" "cd '$GAMES_PATH' && ls -1 | sed 's|^\./||'" > "$CURRENT_LIST_PATH"
@@ -52,7 +52,7 @@ if [ ! -s "$CURRENT_LIST_PATH" ]; then
   exit 0
 fi
 
-# Grab the new list of games
+# Grab the new list of games from remote host
 NEW_LIST_PATH="./newlist.txt"
 ssh -p "$SSH_PORT" "$SSH_HOST" "cd '$GAMES_PATH' && ls -1 | sed 's|^\./||'" > "$NEW_LIST_PATH"
 
