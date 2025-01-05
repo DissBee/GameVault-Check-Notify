@@ -1,8 +1,18 @@
 # GameVault-Check-Notify
-A script to check your GameVault "Games" directory and send a Discord webhook message with the changes (games added or removed)
+A collection of scripts that are all the same thing but different languages. Check your GameVault "Games" directory and send a Discord webhook message with the changes (games added or removed)
+
+I'll get around to cleaning up this readme eventually. 
+
+These are low-effort scripts - I tested that they work enough - use at your own risk and change for your environment as needed
 
 
-# NEW - Bash script that does this too but assumes you know what you are doing. Assumes games are on remote host.
+# NEW - Python version that also checks if it is run locally on the same system that hosts the games - yay!
+New variable: LOCAL_RUN bool 
+
+Now we have python too - neato!
+
+
+# NEWish - Bash script that does this too but assumes you know what you are doing. Assumes games are on remote host.
 Variables:
 
 * SSH_Host="user@address" (set this to be the user@IP/name of the host that holds your games)
