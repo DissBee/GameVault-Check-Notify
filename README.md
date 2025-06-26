@@ -13,6 +13,7 @@ Now we have python too - neato!
 
 
 # NEWish - Bash script that does this too but assumes you know what you are doing. Assumes games are on remote host.
+# NEW - another version (local only) that tries to do all of this locally if you have your games directory mounted to the local system somehow
 Variables:
 
 * SSH_Host="user@address" (set this to be the user@IP/name of the host that holds your games)
