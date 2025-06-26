@@ -1,9 +1,11 @@
 #!/bin/bash
 
 # Variables
-CURRENT_LIST_PATH="./currentlist.txt" # Where the current list will be kept - move this wherever you want but keep name the same such as /scripts/GameVaultCheckNotif/currentlist.txt or whatever
-NEW_LIST_PATH="./newlist.txt" # Set this to the SAME path as above just with the newlist.txt name instead of currentlist.txt
-GAMES_PATH="/your/games/directory"  # Update with the path to your games directory (your mount point to the games if they are hosted on another system) 
+SCRIPT_DIRECTORY="/scripts/GameVault-Check-Notify/" #Set this to the path where you want the script to save the files it creates
+CURRENT_LIST_PATH="$SCRIPT_DIRECTORY/currentlist.txt" # Dont change this unless you know what you are doing
+NEW_LIST_PATH="$SCRIPT_DIRECTORY/newlist.txt" # Dont change this unless you know what you are doing
+GAMES_PATH="/your/games/directory/"  # Update with the path to your games directory (your mount point to the games if they are hosted on another system) 
+# games path might be something like '/run/user/1000/gvfs/smb-share:server=IPaddresshere,share=blahblah' which you would need to use if this applies to you idk
 DISCORD_HOOK_URL="your hook url goes here>"
 DISCORD_ROLE_ID="<@roleidnumber>"   # Update with your Discord role ID
 
