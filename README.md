@@ -1,10 +1,16 @@
-# GameVault-Check-Notify
+# ARCHIVED - SEE MY REPOS FOR NEWER OPTIONS
+
+--------------------------------------------------------------------------------------------------
+
+
+
+## GameVault-Check-Notify
 A collection of scripts that assist with notifying a Discord server of games added/removed from your GameVault server!
 
 ## What does it do?
 On first run, the script will check your "Games" directory and generate a list of all currently known games. The next run will generate a new list, compare the two lists, and send a Discord webhook message with what has been added or removed.
 
-# IMPORTANT NOTES
+## IMPORTANT NOTES
 These scripts are very low effort - they work, but they may require you to make tweaks to fit your particular setup. 
 
 USE AT YOUR OWN RISK
@@ -19,14 +25,14 @@ USE AT YOUR OWN RISK
 * Script updates - add a custom message, cleanup, usability features, simplifying everything a bit
 
 
-# Version Info (WIP)
+## Version Info (WIP)
 
 * Powershell version (Windows systems):
 * Python version (cross platform):
 * Bash version (Linux systems):
 
 
-# Basic Setup Guide (WIP)
+## Basic Setup Guide (WIP)
 Requirements: Already running GameVault server. A drive mapping to the folder containing the games
 
 
